@@ -2,7 +2,7 @@
     <string name="app_name">Familyhealth</string>
     <string name="button_login">Login</string>
     <string name="textview_register">Register</string>
-    <string name="please_wait">Please Waitting....</string>
+    <string name="please_wait">Please Waitting.....</string>
     <!--connect-->
     <string name="connect_get_problem">連線出了問題</string>
     <string name="timeout_message">連線逾時，請稍後在試</string>
