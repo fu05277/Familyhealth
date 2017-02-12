@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Familyhealth</string>
+    <string name="button_login">Login</string>
+    <string name="textview_register">Register</string>
+    <string name="please_wait">Please Waitting....</string>
+    <!--connect-->
+    <string name="connect_get_problem">連線出了問題</string>
+    <string name="timeout_message">連線逾時，請稍後在試</string>
+    <string name="server_fixing">伺服器超载，請稍後在試</string>
+    <string name="connection_fixing">伺服器维修中，請稍後在試。</string>
+    <string name="something_error">伺服器異常，請稍後在試。</string>
+    <string name="text_digits">abcdefghijklmnopqrstuvwxyz0123456789</string>
+    <string name="retry">重試</string>
+    <string name="error">錯誤！</string>
+    <string name="account">account:</string>
+    <string name="title_activity_main3">Main3Activity</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+</resources>

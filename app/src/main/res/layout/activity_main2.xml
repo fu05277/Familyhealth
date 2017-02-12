@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main2"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.myescort.familyhealth.Main2Activity"
+    android:gravity="center_vertical">
+
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:scrollbars="none|vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginRight="50dp"
+            android:layout_marginLeft="50dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="clip_vertical">
+
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:text="姓名："
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/textView_name"
+                            android:textStyle="normal|bold"
+                            android:textSize="24sp" />
+
+                        <EditText
+                            android:layout_height="wrap_content"
+                            android:ems="10"
+                            android:id="@+id/register_name"
+                            android:hint="輸入姓名"
+                            android:layout_width="wrap_content"
+                            android:clickable="false"
+                            android:imeOptions="actionNext"
+                            android:inputType="text" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:text="性別："
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/textView_sex"
+                            android:textStyle="normal|bold"
+                            android:textSize="24sp" />
+
+                        <RadioGroup
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:text="男"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/radioButton2"
+                                android:layout_weight="1" />
+
+                            <RadioButton
+                                android:text="女"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/radioButton3"
+                                android:layout_weight="1" />
+
+                        </RadioGroup>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:text="電話："
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/textView_phone"
+                            android:textStyle="normal|bold"
+                            android:textSize="24sp" />
+
+                        <EditText
+                            android:layout_height="wrap_content"
+                            android:ems="10"
+                            android:id="@+id/register_phone"
+                            android:hint="輸入電話"
+                            android:layout_width="wrap_content"
+                            android:clickable="false"
+                            android:imeOptions="actionNext"
+                            android:inputType="text" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:text="E-mail："
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/textView_email"
+                            android:textStyle="normal|bold"
+                            android:textSize="24sp" />
+
+                        <EditText
+                            android:layout_height="wrap_content"
+                            android:ems="10"
+                            android:id="@+id/register_email"
+                            android:hint="輸入E-mail"
+                            android:layout_width="wrap_content"
+                            android:clickable="false"
+                            android:editable="true"
+                            android:imeOptions="actionNext"
+                            android:inputType="text" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:text="@string/account"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/textView_account"
+                            android:textStyle="normal|bold"
+                            android:textSize="24sp" />
+
+                        <EditText
+                            android:layout_height="wrap_content"
+                            android:ems="10"
+                            android:id="@+id/register_account"
+                            android:hint="輸入帳號"
+                            android:layout_width="wrap_content"
+                            android:clickable="false"
+                            android:imeOptions="actionNext"
+                            android:inputType="text" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:text="密碼："
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/textView_password"
+                            android:textStyle="normal|bold"
+                            android:textSize="24sp" />
+
+                        <EditText
+                            android:layout_height="wrap_content"
+                            android:inputType="text"
+                            android:ems="10"
+                            android:id="@+id/register_password"
+                            android:hint="輸入密碼"
+                            android:layout_width="wrap_content"
+                            android:clickable="false"
+                            android:imeOptions="actionNext" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:text="密碼確認："
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/textView_passwordchec"
+                            android:textStyle="normal|bold"
+                            android:textSize="24sp" />
+
+                        <EditText
+                            android:layout_height="wrap_content"
+                            android:inputType="text"
+                            android:ems="10"
+                            android:id="@+id/register_passwordcheck"
+                            android:hint="密碼確認"
+                            android:layout_width="wrap_content"
+                            android:clickable="false"
+                            android:editable="false"
+                            android:imeOptions="actionSend" />
+                    </LinearLayout>
+
+
+                    <Button
+                        android:text="送出"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/register_button" />
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

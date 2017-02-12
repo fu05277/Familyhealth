@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Google Maps JavaScript API v3 Example: Marker Animations</title>
+  <script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+  <script>
+      var marker;
+      var map;
+      var geocoder;
+
+      var markers = [];
+
+      function mark(lat, log){//標註座標函式
+        var m = new google.maps.LatLng(lat, log);
+        marker = new google.maps.Marker({
+          map:map,
+          position: m
+
+        });     
+      }
+      function me(newlat,newlng){
+        if(marker!= null){
+            marker.setMap(null);
+        }
+        var markers = new google.maps.Marker({
+            position: {lat: newlat, lng: newlng},
+            map:map,
+        });
+        marker=markers;
+
+        var contentString ='Me';
+
+        var infowindow = new google.maps.InfoWindow({
+          content: contentString
+         });
+        marker.addListener('click', function() {
+          infowindow.open(map, marker);
+        });
+      }
+
+      function initialize() {
+        geocoder = new google.maps.Geocoder();
+        var mapOptions = {
+          zoom: 15,
+          mapTypeId: google.maps.MapTypeId.ROADMAP,
+        };
+
+        map = new google.maps.Map(document.getElementById('map_canvas'),
+                mapOptions);
+
+      }
+
+      function centerAt(latitude, longitude){//地圖以給予的座標為中心，即移動地圖至給定的座標
+          myLatlng = new google.maps.LatLng(latitude,longitude);
+          map.panTo(myLatlng);
+      }    
+
+       function codeAddress(address,name){
+        geocoder.geocode({'address': address },function(results, status){
+          if(status == google.maps.GeocoderStatus.OK){
+            //map.setCenter(results[0].geometry.location);
+            var lat = results[0].geometry.location.lat();
+            var lng = results[0].geometry.location.lng();
+            var marker2 =new google.maps.Marker({
+              map: map,
+              position: results[0].geometry.location,
+              icon: 'http://maps.google.com/mapfiles/kml/pal4/icon63.png'
+            });
+            markers.push(marker2);
+
+            alert(lat);
+            alert(lng);
+
+            var contentString = name;
+
+            var infowindow = new google.maps.InfoWindow({
+              content: contentString
+            });
+            marker2.addListener('click', function() {
+              infowindow.open(map, marker2);
+            });
+          }else{
+            alert("Geocode was not successful for the following reason: "+ status);
+          }
+        });
+      }
+
+
+      function setMapOnAll(map) {
+        for (var i = 0; i <= markers.length; i++) {
+          markers[i].setMap(map);
+        }
+      }
+      function clearMarkers() {
+        setMapOnAll(null);
+      }
+
+      function deleteMarkers() {
+        clearMarkers();
+        markers = [];
+      }
+    </script>
+</head>
+<body onload="initialize()">
+<div id="map_canvas" style="width: device-width; height: 470px;">map div</div>
+</body>
+</html>

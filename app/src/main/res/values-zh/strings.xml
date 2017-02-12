@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">健康存摺</string>
+    <string name="button_login">登入</string>
+    <string name="textview_register">註冊</string>
+    <string name="please_wait">請稍等....</string>
+    <string name="account">帳號：</string>
+
+</resources>

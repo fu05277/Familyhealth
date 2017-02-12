@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:weightSum="1"
+        tools:ignore="UselessParent">
+
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <EditText
+                android:layout_height="wrap_content"
+                android:id="@+id/edittext_search"
+                android:layout_weight="0.1"
+                android:background="@android:drawable/edit_text"
+                android:layout_width="250dp"
+                android:text="臺中市霧峰"
+                tools:ignore="HardcodedText,InefficientWeight,LabelFor,TextFields" />
+
+            <Button
+                android:text="搜尋"
+                android:layout_width="109dp"
+                android:layout_height="wrap_content"
+
+                android:id="@+id/search_button"
+                tools:ignore="HardcodedText,ObsoleteLayoutParam" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="0.1">
+
+            <Button
+                android:text="回到我的位置"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/back_button" />
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.1">
+
+                <WebView
+                    android:layout_width="match_parent"
+                    android:id="@+id/webview"
+                    android:layout_below="@+id/edittext_search"
+                    android:layout_height="wrap_content"
+                    tools:ignore="ObsoleteLayoutParam,WebViewLayout" >
+
+                </WebView>
+            </ScrollView>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>
